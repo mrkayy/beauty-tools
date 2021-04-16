@@ -125,7 +125,7 @@ class ShopPage extends ConsumerWidget {
                     .toList(),
               );
             }, error: (err, stack) {
-              print(err.toString());
+              // print(err.toString());
               return Container(
                 child: Text('Oops! An error occured!'),
               );

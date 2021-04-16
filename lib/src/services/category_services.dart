@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import '../../models/models.dart';
-import 'dart:convert' as convert;
 import '../../utils/utils.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 
 class CategoryService {
-  final String baseURL = 'https://solutioninflux-wigtools.herokuapp.com';
+  final String baseURL = 'https://api.wigtools.ng';
+  // final String baseURL = 'https://solutioninflux-wigtools.herokuapp.com';
   Dio _dio = Dio();
 
   Future<Categories> getCategories() async {

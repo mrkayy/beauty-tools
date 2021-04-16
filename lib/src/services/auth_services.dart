@@ -34,7 +34,7 @@ class AuthenticationServices {
         if (result.status) {
           prefs.setBool('hasUser', false);
           prefs.setString("user_token", result.data.accessToken);
-          prefs.setString("user_token", result.data.refreshToken);
+          prefs.setString("refresh_token", result.data.refreshToken);
         }
         print(result.message);
       }
