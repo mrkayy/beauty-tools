@@ -71,7 +71,7 @@ class ProductsListScreen extends ConsumerWidget {
                     return Expanded(
                       child: GestureDetector(
                         onTap: () => Navigator.of(context).pop(),
-                        child: eContainer(
+                        child: Container(
                           alignment: Alignment.center,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,

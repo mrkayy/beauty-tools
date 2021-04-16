@@ -26,8 +26,9 @@ class SigninScreen extends ConsumerWidget {
       // close keypad and notiffies user
       FocusScope.of(context).requestFocus(new FocusNode());
       print({_credentials.email, _credentials.password});
+      // fetech login service from provider
       final authService = context.read(authsProvider);
-
+      final _profile = context.read(userprofileProvider).;
       // authenticating user into the system
       authService.userLogin(_credentials, context).catchError((err) {
         context.read(loadingChangeNotifer).setLoading(false);
@@ -37,13 +38,13 @@ class SigninScreen extends ConsumerWidget {
           duration: Duration(seconds: 3),
         ));
       }).then((res) {
+        context.read(loadingChangeNotifer).setLoading(false);
         final bool hasUser = res.status;
         if (hasUser) {
           Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (_) => HomeScreen(),
           ));
         }
-        context.read(loadingChangeNotifer).setLoading(false);
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text(res.message),
           duration: Duration(seconds: 3),

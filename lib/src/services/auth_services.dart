@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'dart:convert' as convert;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/models.dart';
