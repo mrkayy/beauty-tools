@@ -5,4 +5,5 @@ export './user_auth.dart';
 export './status_response.dart';
 export 'api_response_generic.dart';
 export './categories.dart';
+export './accounts.dart';
 export './query_request.dart';

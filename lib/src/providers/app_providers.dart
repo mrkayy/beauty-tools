@@ -3,5 +3,6 @@ export './notifiers/userprofile_state.dart';
 
 export './authentication.dart';
 export './categories.dart';
+export './account.dart';
 export './userToken.dart';
 export './products.dart';

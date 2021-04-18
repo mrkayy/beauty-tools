@@ -28,7 +28,7 @@ class SigninScreen extends ConsumerWidget {
       print({_credentials.email, _credentials.password});
       // fetech login service from provider
       final authService = context.read(authsProvider);
-      final _profile = context.read(userprofileProvider).;
+      // final _profile = context.read(userprofileProvider);
       // authenticating user into the system
       authService.userLogin(_credentials, context).catchError((err) {
         context.read(loadingChangeNotifer).setLoading(false);
@@ -41,6 +41,7 @@ class SigninScreen extends ConsumerWidget {
         context.read(loadingChangeNotifer).setLoading(false);
         final bool hasUser = res.status;
         if (hasUser) {
+          
           Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (_) => HomeScreen(),
           ));
