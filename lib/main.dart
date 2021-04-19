@@ -36,7 +36,8 @@ class MyApp extends StatelessWidget {
         SigninScreen.id: (BuildContext context) => SigninScreen(),
         SignupScreen.id: (BuildContext context) => SignupScreen(),
         HomeScreen.id: (BuildContext context) => HomeScreen(),
-        ProductsListScreen.id: (BuildContext context) => ProductsListScreen(),
+        ProductsListScreen.id: (BuildContext context) =>
+            ProductsListScreen(slug: '', product: ''),
         PaymentMethod.id: (BuildContext context) => PaymentMethod(),
         ProductDetailsScreen.id: (BuildContext context) =>
             ProductDetailsScreen(),
